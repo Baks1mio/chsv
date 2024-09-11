@@ -1,0 +1,159 @@
+nav
+    position: fixed
+    display: flex
+    align-items: center
+    width: 100%
+    min-height: 70px
+    background-color: rgba(0, 0, 0, 0.7)
+    padding: 0 40px
+
+.nav
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &_logo
+        width: 90px
+        height: 40px
+    &_menu
+        display: flex
+        justify-content: space-between
+        &_link
+            margin-right: 40px
+            font-weight: 800
+            font-size: 16px
+            text-transform: uppercase
+            text-align: center
+            text-decoration: none
+            color: #fff
+            transition: all 0.15s
+            &:nth-last-child(1)
+                margin-right: 0
+            @include text_hover_to_grey
+    &_button
+        border-radius: 8px
+        padding: 5px 10px
+        width: 140px
+        font-size: 14px
+        font-weight: 900
+        line-height: 130%
+        text-transform: uppercase
+        transition: all 0.2s
+        @include btn_hover_to_grey
+
+.subheader
+    padding-top: 200px
+    padding-bottom: 50px
+    background: url('../img/subheader_img.jpg') center (center / cover) no-repeat
+    &_logo
+        display: block
+        margin: 0 auto
+    &_title
+        text-transform: uppercase
+        font-size: 72px
+        font-weight: 700
+        color: rgba(255, 255, 255, 0.85)
+        text-align: center
+        margin-top: 15px
+        text-shadow: 2px 2px 10px #c3c2c4
+    &_promo
+        margin-top: 30px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-align: center
+        color: #fff
+        font-size: 36px
+        font-weight: 500
+        &_round
+            display: flex
+            justify-content: center
+            align-items: center
+            height: 60px
+            width: 60px
+            border-radius: 100%
+            background-color: #fff
+            margin-right: 30px
+            cursor: pointer
+            transition: all 0.2s
+            @include player_hover
+            i
+                transform: translateY(7%)
+                font-size: 35px
+                color: #000
+    &_rider
+        margin-top: 150px
+        display: flex
+        justify-content: space-between
+        a
+            display: block
+            font-size: 20px
+            font-weight: 500
+            text-decoration: none
+            color: #fff
+            &:after
+                content: ''
+                display: block
+                height: 2px
+                background-color: #fff
+                width: 0%
+                transition: all 0.5s
+            &:hover
+                &:after
+                    width: 100%
+
+.divider
+    display: block
+    margin: 0 auto
+    background-color: #fff
+    height: 3px
+    width: 150px
+    margin-bottom: 20px
+
+.roster
+    padding: 80px 0 80px 0
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    // background-color: #000
+    &_title
+        color: #fff
+        font-size: 42px
+        text-align: center
+        margin-bottom: 50px
+        font-weight: 700
+        text-transform: uppercase
+    &_block
+        color: #fff
+        text-align: center
+        font-weight: 300
+        img
+            border: 3px solid #fff
+            object-fit: cover
+            object-position: 50% 0%
+            width: 100%
+            height: 400px
+            margin-bottom: 15px
+
+.promo
+    padding: 80px 0 80px 0
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    &_title
+        color: #fff
+        font-size: 42px
+        text-align: center
+        margin-bottom: 50px
+        font-weight: 700
+        text-transform: uppercase
+    iframe
+        width: 100%
+        height: 400px
+
+.whywe
+    min-height: 800px
+    padding-top: 80px
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    &_title
+        color: #fff
+        font-size: 42px
+        text-align: center
+        margin-bottom: 50px
+        font-weight: 700
+        text-transform: uppercase

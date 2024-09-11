@@ -1,0 +1,21 @@
+@mixin btn_hover_to_grey
+    &:hover
+        background-color: $hover-grey
+        color: rgba(0, 0, 0, 0.8)
+
+@mixin text_hover_to_grey
+    &:hover
+        color: $hover-grey
+
+@mixin player_hover
+    &:hover
+        background-color: #000
+        i
+            color: #fff
+
+@mixin link_hover_underline
+    &:hover
+        &::after
+            height: 1px
+            width: 100px
+            background-color: #fff
