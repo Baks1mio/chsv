@@ -30,7 +30,8 @@ nav
                 margin-right: 0
             @include text_hover_to_grey
     &_button
-        border-radius: 8px
+        border: none
+        border-radius: 10px
         padding: 5px 10px
         width: 140px
         font-size: 14px
@@ -38,12 +39,14 @@ nav
         line-height: 130%
         text-transform: uppercase
         transition: all 0.2s
-        @include btn_hover_to_grey
+        @include player_hover
 
 .subheader
-    padding-top: 200px
+    min-height: 900px
+    padding-top: 230px
     padding-bottom: 50px
-    background: url('../img/subheader_img.jpg') center (center / cover) no-repeat
+    background: url('../img/subheader_bg2.jpg') center (center / cover) no-repeat
+    background-position: 50% 27%
     &_logo
         display: block
         margin: 0 auto
@@ -54,7 +57,7 @@ nav
         color: rgba(255, 255, 255, 0.85)
         text-align: center
         margin-top: 15px
-        text-shadow: 2px 2px 10px #c3c2c4
+        text-shadow: 2px 2px 15px #c3c2c4
     &_promo
         margin-top: 30px
         display: flex
@@ -81,7 +84,7 @@ nav
                 font-size: 35px
                 color: #000
     &_rider
-        margin-top: 150px
+        margin-top: 50px
         display: flex
         justify-content: space-between
         a
@@ -108,13 +111,15 @@ nav
     height: 3px
     width: 150px
     margin-bottom: 20px
+    box-shadow: 0 0 10px 2px rgba(255, 255, 255, 0.6)
 
 .roster
     padding: 80px 0 80px 0
     background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
     // background-color: #000
     &_title
-        color: #fff
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
         font-size: 42px
         text-align: center
         margin-bottom: 50px
@@ -124,19 +129,34 @@ nav
         color: #fff
         text-align: center
         font-weight: 300
+        font-size: 18px
+        span
+            font-size: 20px
+            color: #fff
+            text-align: center
+            text-shadow: 2px 2px 10px #c3c2c4
+            font-weight: 500
         img
-            border: 3px solid #fff
+            display: block
+            margin-top: 12px
+            border: 2px solid #fff
+            border-radius: 25px
+            box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.6)
             object-fit: cover
             object-position: 50% 0%
             width: 100%
             height: 400px
             margin-bottom: 15px
+            transition: all 0.2s
+            &:hover
+                box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
 
 .promo
     padding: 80px 0 80px 0
     background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
     &_title
-        color: #fff
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
         font-size: 42px
         text-align: center
         margin-bottom: 50px
@@ -145,15 +165,229 @@ nav
     iframe
         width: 100%
         height: 400px
+        border: 2px solid #fff
+        border-radius: 25px
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.6)
+        transition: all 0.2s
+        &:hover
+            box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
 
 .whywe
-    min-height: 800px
-    padding-top: 80px
+    padding: 80px 0 60px 0
     background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
     &_title
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
+        font-size: 48px
+        margin-bottom: 30px
+        font-weight: 700
+        text-transform: uppercase
+    &_block
+        display: flex
+        justify-content: center
+        align-items: center
+        margin-top: 35px
+        min-height: 200px
+    &_round
+        display: flex
+        justify-content: center
+        align-items: center
+        width: 90px
+        height: 90px
+        background-color: #000
+        border-radius: 100%
+        margin-right: 30px
+        border: 1px solid #fff
+        border-radius: 100%
+        box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.6)
+        transition: all 0.2s
+        &:hover
+            box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
+
+        i
+            font-size: 40px
+            color: #fff
+    &_descr
         color: #fff
+        width: 320px
+    &_subtitle
+        text-shadow: 2px 2px 10px #c3c2c4
+        font-size: 28px
+        font-weight: 700
+        margin-bottom: 15px
+        line-height: 120%
+    &_text
+        font-weight: 300
+        font-size: 18px
+
+.clients
+    min-height: 800px
+    padding: 100px 0 60px 0
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    &_title
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
+        font-size: 48px
+        margin-bottom: 30px
+        font-weight: 700
+        text-align: right
+        text-transform: uppercase
+    &_block
+        display: flex
+        align-items: center
+        margin-top: 50px
+    img
+        display: block
+        object-fit: cover
+        object-position: 0% 100%
+        width: 250px
+        height: 250px
+        border-radius: 100%
+        margin-right: 150px
+        box-shadow: 0 0 3px 2px rgba(255, 255, 255, 1.0)
+        transition: all 0.2s
+        &:hover
+            box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
+    &_text
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 10px #c3c2c4
+        font-size: 28px
+        font-weight: 700
+        text-align: right
+        text-transform: uppercase
+        font-style: italic
+        &:after
+            content: ''
+            display: block
+            border: 1px solid #fff
+            width: 100%
+
+.price
+    padding: 100px 0 80px 0
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    &_title
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
         font-size: 42px
         text-align: center
         margin-bottom: 50px
         font-weight: 700
         text-transform: uppercase
+    &_item
+        margin-top: 40px
+        padding: 15px
+        color: #fff
+        font-weight: 300
+        font-size: 24px
+        border: 1px solid #fff
+        box-shadow: 0 0 3px 1px rgba(255, 255, 255, 1.0)
+        transition: all 0.2s
+        &:hover
+            box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
+        i
+            margin-right: 10px
+
+.reviews
+    padding: 100px 0 60px 0
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    &_title
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 6px #c3c2c4
+        font-size: 42px
+        text-align: center
+        font-weight: 700
+        text-transform: uppercase
+    &_block
+        color: #fff
+        margin-top: 40px
+        &:nth-child(-n+2)
+            margin-bottom: 20px
+    &_name
+        font-size: 20px
+        text-shadow: 2px 2px 10px #c3c2c4
+        font-weight: 700
+        margin-top: 10px
+    &_text
+        font-size: 18px
+        font-weight: 300
+        margin-top: 2px
+    i
+        font-size: 24px
+    a
+        text-decoration: none
+    &_button
+        display: block
+        margin: 0 auto
+        margin-top: 50px
+        height: 50px
+        width: 150px
+        background: none
+        border: 2px solid #fff
+        box-shadow: 0 0 3px 1px rgba(255, 255, 255, 1.0)
+        border-radius: 50px
+        transition: all 0.2s
+        font-size: 16px
+        font-weight: 300
+        color: #fff
+        text-transform: uppercase
+        text-align: center
+        padding: 0 5px 0 5px
+        &:hover
+            box-shadow: 0 0 10px 4px rgba(255, 255, 255, 1)
+
+.contacts
+    padding: 30px 0 50px 0
+    // background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    background-color: #000
+    &_title
+        color: rgba(255, 255, 255, 1)
+        text-shadow: 2px 2px 4px #c3c2c4
+        font-size: 36px
+        font-weight: 700
+        text-transform: uppercase
+        text-align: center
+    &_phone
+        margin-top: 40px
+        a
+            font-size: 24px
+            font-weight: 700
+            color: #fff
+    &_name
+        margin-top: 20px
+        font-weight: 300
+        color: #fff
+        font-size: 24px
+    &_socialmedia
+        margin-top: 40px
+        text-decoration: none
+        font-size: 26px
+        font-weight: 700
+        color: #fff
+    &_block
+        margin-top: 15px
+        display: flex
+        justify-content: space-between
+        align-items: center
+    &_item
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+
+    &_round
+        display: flex
+        justify-content: center
+        align-items: center
+        height: 35px
+        width: 35px
+        background-color: #fff
+        border-radius: 100%
+        img
+            display: block
+            width: 25px
+            height: 25px
+    &_text
+        text-decoration: none
+        font-size: 14px
+        font-weight: 400
+        color: #fff
