@@ -2,6 +2,7 @@ nav
     position: fixed
     display: flex
     align-items: center
+    justify-content: space-between
     width: 100%
     min-height: 70px
     background-color: rgba(0, 0, 0, 0.7)
@@ -29,6 +30,9 @@ nav
             &:nth-last-child(1)
                 margin-right: 0
             @include text_hover_to_grey
+            &.active
+                text-decoration: underline
+
     &_button
         border: none
         border-radius: 10px
@@ -40,6 +44,58 @@ nav
         text-transform: uppercase
         transition: all 0.2s
         @include player_hover
+
+#overlay
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: rgba(0, 0, 0, 0.7)
+    display: none
+    z-index: 10
+
+#booking-popup
+    position: fixed
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    width: 300px
+    height: 250px
+    padding: 20px
+    // background-color: #fff
+    background: url('../img/stars_bg.jpg') center (center / cover) no-repeat
+    color: #fff
+    text-align: center
+    border-radius: 10px
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2)
+    z-index: 11
+    display: none
+    &_arrow
+        position: absolute
+        width: 20px
+        height: 20px
+        top: 160px
+        right: 100px
+        transform: rotate(-30deg)
+        background-color: #fff
+    h2
+        font-size: 36px
+    h3
+        font-size: 30px
+        margin-bottom: 15px
+    .close-btn
+        position: absolute
+        top: 7px
+        right: 7px
+        background: none
+        border: none
+        font-size: 20px
+        color: #fff
+        cursor: pointer
+
+.hamburger
+    display: none
 
 .subheader
     min-height: 900px
@@ -178,9 +234,10 @@ nav
     &_title
         color: rgba(255, 255, 255, 1)
         text-shadow: 2px 2px 6px #c3c2c4
-        font-size: 48px
+        font-size: 42px
         margin-bottom: 30px
         font-weight: 700
+        text-align: center
         text-transform: uppercase
     &_block
         display: flex
@@ -230,7 +287,6 @@ nav
         font-size: 48px
         margin-bottom: 30px
         font-weight: 700
-        text-align: right
         text-transform: uppercase
     &_block
         display: flex
