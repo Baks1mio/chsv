@@ -7,7 +7,6 @@
             &_link
                 font-size: 14px
         &_button
-            width: 120px
             font-size: 12px
 
 @media (max-width: 1199px)
@@ -17,51 +16,42 @@
                 font-size: 12px
                 margin-right: 25px
         &_button
-            width: 100px
             font-size: 10px
 
 @media (max-width: 991px)
-    nav
+    .nav
         padding-top: 10px
         align-items: start
-    .nav
         &_menu
             &_link
                 font-size: 11px
         &_button
             position: absolute
-            top: 45px
-            height: 20px
-            width: 150px
+            top: 35px
+            left: 50%
+            transform: translateX(-50%)
             padding: 5px 0px
 
 @media (max-width: 767px)
-    nav
-        align-items: center
-        padding: 0
     .nav
-        justify-content: space-between
+        align-items: center
+        padding-top: 0px
         &_logo
             width: 70px
             height: 30px
         &_menu
-            &_link
-                display: none
+            display: none
         &_button
             position: static
-            height: 35px
-            width: 100px
-            padding: 5px 5px
-    .hamburger
-        display: block
-        // position: absolute
-        // right: 40px
-        // top: 50%
-        // transform: translateY(-50%)
-        width: 20px
-        span
+            transform: translateX(0%)
+            font-size: 9px
+            padding: 5px
+        .hamburger
             display: block
-            height: 2px
-            width: 100%
-            background-color: #fff
-            margin-top: 4px
+            width: 20px
+            div
+                display: block
+                height: 2px
+                width: 100%
+                background-color: #fff
+                margin-top: 4px

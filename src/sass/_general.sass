@@ -1,17 +1,25 @@
-nav
-    position: fixed
-    display: flex
-    align-items: center
-    justify-content: space-between
+html, body
+    overflow-x: hidden
+
+header
     width: 100%
-    min-height: 70px
-    background-color: rgba(0, 0, 0, 0.7)
-    padding: 0 40px
 
 .nav
     display: flex
     justify-content: space-between
     align-items: center
+    flex-shrink: 1
+    position: fixed
+    top: 0
+    left: 0
+    right: 0
+    // width: 100%
+    min-height: 60px
+    background-color: rgba(0, 0, 0, 0.7)
+    padding: 0 40px
+
+    .hamburger
+        display: none
     &_logo
         width: 90px
         height: 40px
@@ -32,12 +40,10 @@ nav
             @include text_hover_to_grey
             &.active
                 text-decoration: underline
-
     &_button
         border: none
         border-radius: 10px
         padding: 5px 10px
-        width: 140px
         font-size: 14px
         font-weight: 900
         line-height: 130%
@@ -94,11 +100,8 @@ nav
         color: #fff
         cursor: pointer
 
-.hamburger
-    display: none
-
 .subheader
-    min-height: 900px
+    min-height: 970px
     padding-top: 230px
     padding-bottom: 50px
     background: url('../img/subheader_bg2.jpg') center (center / cover) no-repeat
