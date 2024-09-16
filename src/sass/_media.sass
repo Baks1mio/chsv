@@ -138,7 +138,7 @@
             align-items: center
             text-align: center
             top: 0
-            left: -100%
+            right: -100%
             width: 50%
             height: 100vh
             padding: 20px 15px
@@ -149,16 +149,19 @@
                 margin: 0
                 margin-top: 25px
             &_active
-                left: 0
-                z-index: 3
+                right: 0
+                z-index: 2
         &_button
             position: static
             transform: translateX(0%)
             font-size: 9px
             padding: 5px
         .hamburger
+            position: relative
+            z-index: 3
             display: block
             width: 20px
+            height: 20px
             div
                 display: block
                 height: 2px
