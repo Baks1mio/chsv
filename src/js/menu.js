@@ -35,18 +35,6 @@ $(document).ready(function () {
     // Обновляем активную ссылку при скролле
     $(document).on("scroll", updateActiveLink);
 
-    // При клике на ссылку плавно скроллим к секции
-    $('.nav_menu_link').on('click', function (e) {
-        e.preventDefault();
-        var target = this.hash;
-
-        $('html, body').animate({
-            scrollTop: $(target).offset().top - navHeight // Учет высоты меню
-        }, 500, function () {
-            window.location.hash = target;
-        });
-    });
-
     // Инициализируем активную ссылку при загрузке страницы
     updateActiveLink();
 
