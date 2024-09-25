@@ -145,21 +145,16 @@ header
         display: flex
         justify-content: space-between
         a
+            background-color: #fff
+            border-radius: 10px
+            padding: 2px 7px
             display: block
             font-size: 20px
-            font-weight: 500
+            font-weight: 700
             text-decoration: none
-            color: #fff
-            &:after
-                content: ''
-                display: block
-                height: 2px
-                background-color: #fff
-                width: 0%
-                transition: all 0.5s
-            &:hover
-                &:after
-                    width: 100%
+            color: #000
+            transition: all 0.2s
+            @include player_hover
 
 .divider
     display: block
@@ -255,7 +250,6 @@ header
         border-radius: 100%
         margin-right: 30px
         border: 1px solid #fff
-        border-radius: 100%
         box-shadow: 0 0 10px 3px rgba(255, 255, 255, 0.6)
         transition: all 0.2s
         &:hover
